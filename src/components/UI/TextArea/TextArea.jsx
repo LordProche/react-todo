@@ -5,13 +5,11 @@ const TextArea = ({onChange, value, ...props}) => {
     const textAreaRef = useRef(null)
 
     const resizeTextArea = (e) => {
-        if(textAreaRef && textAreaRef.current){
-            textAreaRef.current.style.height = 'auto'
-            const scrollHeight = textAreaRef.current.scrollHeight
-            textAreaRef.current.style.height = scrollHeight + 'px'
-            if(onChange){
-                onChange(e)
-            }
+        textAreaRef.current.style.height = 'auto'
+        const scrollHeight = textAreaRef.current.scrollHeight
+        textAreaRef.current.style.height = scrollHeight + 'px'
+        if(onChange){
+            onChange(e)
         }
     }
     return (
