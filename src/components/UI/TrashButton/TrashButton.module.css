@@ -1,0 +1,17 @@
+.button{
+    width:25px;
+    height:25px;
+    background-color:#928de1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:none;
+    transition: all .3s ease-out;
+    margin-left:auto;
+}
+.button:hover{
+    background-color:#676bc2;
+    transform:scale(1.03);
+
+}
