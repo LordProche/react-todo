@@ -4,4 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background: url("./assets/background.png") no-repeat;
+    background-position-y: top;
+    background-size:70%;
+    background-position-x: center;
+}
