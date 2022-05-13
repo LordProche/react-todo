@@ -17,6 +17,7 @@
     border-radius: 10px;
     border:none;
     outline:none;
+    font-family: 'Comfortaa';
 }
 
 .input::placeholder{
