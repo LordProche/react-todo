@@ -4,9 +4,11 @@
     padding: 13px 20px;
     border: 1px solid #E5E5E5;
     grid-template: auto 1fr / 20px 1fr 20px;
-
+    background-color:rgba(255,255,255,80%);
 }
-
+.list_item textarea{
+    background:none;
+}
 .checked{
     text-decoration: line-through;
 }
