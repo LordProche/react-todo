@@ -1,18 +1,26 @@
 import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
-import {addTask} from "../../redux/tasksSlice";
+import styles from './InputForm.module.css'
+import PlusButton from "../UI/PlusButton/PlusButton";
 
-const InputForm = () => {
+const InputForm = ({placeholder, onEnter, withButton, onChange, ...props}) => {
     const [inputText, setInputText] = useState('')
-    const dispatch = useDispatch()
     const addTaskByMessage = (message) => {
-        dispatch(addTask(message))
-        setInputText('')
+        if(onEnter){
+            onEnter(message)
+            setInputText('')
+        }
     }
     return (
-        <div>
+        <div className={styles.form} {...props}>
             <input type="text"
-                   onChange={(e) => setInputText(e.target.value)}
+                   className={styles.input}
+                   placeholder={placeholder}
+                   onChange={(e) => {
+                       setInputText(e.target.value)
+                       if(onChange){
+                           onChange()
+                       }
+                   }}
                    onKeyDown={(e) => {
                        if(e.key === 'Enter' && inputText){
                            addTaskByMessage(inputText)
@@ -20,12 +28,11 @@ const InputForm = () => {
                    }}
                    value={inputText}
             />
-            <button
-                disabled={inputText ? false: true}
-                onClick={() => {addTaskByMessage(inputText)}}
-            >
-                Add task
-            </button>
+            {withButton ?             <
+                PlusButton disabled={!inputText} onClick={() => {addTaskByMessage(inputText)}}/>
+                :
+                null
+            }
         </div>
     );
 };
