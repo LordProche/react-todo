@@ -18,7 +18,7 @@ const InputForm = ({placeholder, onEnter, withButton, onChange, ...props}) => {
                    onChange={(e) => {
                        setInputText(e.target.value)
                        if(onChange){
-                           onChange()
+                           onChange(e)
                        }
                    }}
                    onKeyDown={(e) => {
