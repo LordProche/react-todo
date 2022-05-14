@@ -1,12 +1,12 @@
 import React from 'react';
-import List from "../List/List";
 import ControlForm from "../ControlForm/ControlForm";
+import FilteredList from "../FilteredList/FilteredList";
 
 const ControllableList = () => {
     return (
         <>
             <ControlForm/>
-            <List/>
+            <FilteredList/>
         </>
     );
 };
