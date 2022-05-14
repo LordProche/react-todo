@@ -1,0 +1,7 @@
+.task_input{
+    margin-top:40px;
+    position:relative;
+}
+.task_input input{
+    width:100%;
+}
