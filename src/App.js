@@ -3,9 +3,7 @@ import ControllableList from "./components/ControllableList/ControllableList";
 
 const App = () => {
     return (
-        <>
-            <ControllableList/>
-        </>
+        <ControllableList/>
     );
 };
 
