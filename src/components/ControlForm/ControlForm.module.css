@@ -1,0 +1,22 @@
+.form{
+    width:80%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+.form button{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.task_input{
+    margin-top:40px;
+    position:relative;
+}
+
+.task_input input{
+    width:100%;
+}

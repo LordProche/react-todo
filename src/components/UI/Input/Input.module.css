@@ -1,16 +1,4 @@
-.form{
-    width:80%;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: 1fr;
-    position: relative;
-}
-.form button{
-    position:absolute;
-    right:15px;
-    top:50%;
-    transform: translateY(-50%);
-}
+
 .input{
     padding: 15px 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
