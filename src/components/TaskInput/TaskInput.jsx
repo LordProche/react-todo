@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 import styles from "./TaskInput.module.css";
 import PlusButton from "../UI/PlusButton/PlusButton";
 import Input from "../UI/Input/Input";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addTask} from "../../redux/tasksSlice";
 
 const TaskInput = () => {
     const dispatch = useDispatch()
     const [newTaskTitle, setNewTaskTitle] = useState('')
+    const selectedWeekDay = useSelector(state => state.calendarSlice.selectedDay)
 
     const createTask = () => {
-        dispatch(addTask(newTaskTitle))
+        dispatch(addTask({title: newTaskTitle, day:selectedWeekDay}))
         setNewTaskTitle('')
     }
 

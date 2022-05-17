@@ -1,4 +1,4 @@
-const filterTasks = (list, paramToFilter, filterValue) => {
+export const entryFilter = (list, paramToFilter, filterValue) => {
     return list.filter(task => {
         const taskParamValueLower = task[paramToFilter].toLowerCase();
         const filterValueLower = filterValue.toLowerCase();
@@ -6,4 +6,7 @@ const filterTasks = (list, paramToFilter, filterValue) => {
     })
 }
 
-export default filterTasks
+export const matchFilter = (list, paramToFilter, filterValue) => {
+    return list.filter(task => task[paramToFilter] === filterValue)
+}
+

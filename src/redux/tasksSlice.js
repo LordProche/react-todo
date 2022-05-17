@@ -8,7 +8,7 @@ const tasksSlice = createSlice({
     reducers:{
         addTask(state, action){
             const id = state.tasks.length > 0 ? state.tasks[state.tasks.length-1].id + 1 : 0
-            state.tasks.push({id, title: action.payload, isChecked:false})
+            state.tasks.push({id, title: action.payload.title, isChecked:false, day: action.payload.day})
         },
         removeTask(state, action){
             state.tasks = state.tasks.filter(task => task.id !== action.payload)

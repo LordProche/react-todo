@@ -11,6 +11,7 @@ import TextArea from "../UI/TextArea/TextArea";
 const ListItem = ({task}) => {
     const dispatch = useDispatch()
     const title_classes = task.isChecked ? [styles.checked, styles.title].join(' ') : [styles.title]
+
     return (
         <>
             <div className={styles.list_item}>
@@ -22,7 +23,7 @@ const ListItem = ({task}) => {
                     {task.isChecked ?
                         <TrashButton onClick={() => dispatch(removeTask(task.id))}/>
                         :
-                        <div></div>
+                        null
                     }
 
                     <TextArea
