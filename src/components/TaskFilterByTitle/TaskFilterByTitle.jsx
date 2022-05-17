@@ -1,10 +1,10 @@
 import React from 'react';
 import Input from "../UI/Input/Input";
-import styles from "./TaskFilter.module.css";
+import styles from "./TaskFilterByTitle.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {setFilterByTitle} from "../../redux/filtersSlice";
 
-const TaskFilter = () => {
+const TaskFilterByTitle = () => {
     const filterValue = useSelector(state => state.filtersSlice.filterByTitle)
     const dispatch = useDispatch()
 
@@ -18,4 +18,4 @@ const TaskFilter = () => {
     );
 };
 
-export default TaskFilter;
+export default TaskFilterByTitle;

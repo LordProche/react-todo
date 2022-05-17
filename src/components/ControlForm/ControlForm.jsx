@@ -3,13 +3,15 @@ import React from 'react';
 import styles from './ControlForm.module.css';
 
 import TaskInput from "../TaskInput/TaskInput";
-import TaskFilter from "../TaskFilter/TaskFIlter";
+import TaskFilterByTitle from "../TaskFilterByTitle/TaskFilterByTitle";
+import TaskCalendarPanel from "../TaskCalendarPanel/TaskCalendarPanel";
 
 const ControlForm = () => {
     return (
         <div className={styles.form}>
             <TaskInput/>
-            <TaskFilter/>
+            <TaskFilterByTitle/>
+            <TaskCalendarPanel/>
         </div>
     );
 };

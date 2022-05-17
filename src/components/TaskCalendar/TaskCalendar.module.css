@@ -1,0 +1,33 @@
+.calendar{
+    background-image: url("../../assets/calendar.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendar.active{
+    background-image: url("../../assets/activeCalendar.png");
+}
+
+.calendar span{
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 100%;
+}
+
+
+
+.weekDay{
+    font-family: 'Comfortaa', serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.day{
+    font-family: 'Comfortaa', serif;
+    font-weight: 700;
+    font-size: 27px;
+}
