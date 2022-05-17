@@ -1,13 +1,15 @@
-const formatWeekDays = (date) => {
+import getWeekDays from "./getWeekDays";
+
+const getWeekInfo = () => {
+    const date = getWeekDays()
     const weekDayLabels = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    return date.map(day => (
-            {
+    return date.map(day => {
+            return {
                 weekDay: weekDayLabels[day.getDay()],
                 day: day.getDate(),
-                isCurrent: new Date().getDate() === day.getDate()
             }
-        )
+        }
     )
 }
 
-export default formatWeekDays
+export default getWeekInfo
