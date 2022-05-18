@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TaskCalendar.module.css'
-import {useSelector} from "react-redux";
+import { useSelector} from "react-redux";
 
 const TaskCalendar = ({weekDay, day, isActive,  width, height, ...props}) => {
 
@@ -9,14 +9,12 @@ const TaskCalendar = ({weekDay, day, isActive,  width, height, ...props}) => {
     const tasks = useSelector(state => state.tasksSlice.tasks)
     const countOfTasksByDay = tasks.reduce((prev, current) => current.day === weekDay ? prev + 1 : prev, 0)
 
-    console.log(countOfTasksByDay)
-    const calendarStyles = {
-        width,
-        height
-    }
-
     return (
-        <div className={ [styles.calendar, isActive ? styles.active : ''].join(' ')} style={calendarStyles} {...props}>
+        <div
+            className={ [styles.calendar, isActive ? styles.active : ''].join(' ')}
+            style={{width, height}}
+            {...props}
+        >
             <span className={styles.weekDay}>{shortWeekDay}</span>
             <span className={styles.day}>{formattedDay}</span>
             {countOfTasksByDay ?

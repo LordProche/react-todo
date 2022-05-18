@@ -24,9 +24,18 @@ const tasksSlice = createSlice({
                     {...task, description: action.payload.description}
                     : task
             )
+        },
+        changeTaskDay(state, action){
+            state.tasks.map(task => {
+                if( task.id === action.payload.id){
+                    task.day = action.payload.day
+                }
+
+            })
+
         }
     }
 })
 
 export default tasksSlice.reducer
-export const {addTask, removeTask, toggleIsChecked, changeTaskDescription} = tasksSlice.actions
+export const {addTask, removeTask, toggleIsChecked, changeTaskDescription, changeTaskDay} = tasksSlice.actions

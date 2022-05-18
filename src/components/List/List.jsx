@@ -1,8 +1,7 @@
 import React from 'react';
 
-import ListItem from "../ListItem/ListItem";
-
 import styles from './List.module.css'
+import ListItem from "../ListItem/ListItem";
 
 const List = ({tasks}) => {
     return (
