@@ -1,6 +1,18 @@
 .calendar_panel{
     margin-top:20px;
     display:grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns:repeat(7, 1fr);
     justify-items: center;
+}
+
+@media(max-width:991px){
+    .calendar_panel{
+        grid-template-columns:repeat(4, 1fr);
+    }
+}
+@media(max-width:568px){
+    .calendar_panel{
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
 }

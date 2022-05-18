@@ -1,8 +1,6 @@
 .form{
     width:80%;
     margin:0 auto;
-    display:grid;
-    grid-template-columns: 1fr;
     position: relative;
 }
 .form button{
